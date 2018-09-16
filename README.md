@@ -57,13 +57,13 @@
 
 
 ## css和html
-### 1.Doctype作用？标准模式和兼容模式区别。
+### Doctype作用？标准模式和兼容模式区别。
 
 声明在HTML文档第一行，告诉浏览器用什么文档标准解析这个文档。DOCTYPE不存在或格式不正确会导致文档以兼容模式呈现。
 
 ### 标准模式的排版 和JS运作模式都是以该浏览器支持的最高标准运行。在兼容模式中，页面以宽松的向后兼容的方式显示,模拟老式浏览器的行为以防止站点无法工作。
 
-### 2.行内元素有哪些？块级元素有哪些？
+### 行内元素有哪些？块级元素有哪些？
 
 每个元素都有一个diaplay属性，确定该元素的类型，比如块级元素默认值就是block,行内元素就是none
 
@@ -71,7 +71,7 @@
 
 块级元素：div p ul li ol h1 h2。。。
 
-### 3.引入样式link和import区别
+### 引入样式link和import区别
 
 link属于html直接是在html中引入，import在css中引入只能引入css
 
@@ -79,7 +79,7 @@ link在直接引入页面的时候就就已经引入了，import需要在引入c
 
 import是CSS2.1 提出的，只在IE5以上才能被识别，而link是html标签，无兼容问题;
 
-### 4.HTML5有哪些新特性？如何区分html和html5
+### HTML5有哪些新特性？如何区分html和html5
 
 html5新增了好多东西比如：
 
@@ -97,22 +97,23 @@ html5新增了好多东西比如：
 
 可以按上文说的doctype区分也可以使用标签区分
 
-### 5.html语义化理解:
+### html语义化理解:
 
 语义化是html结构更清晰，便于浏览器解析，利于SEO搜素，使代码更好理解，便于维护
 
-### 6.不使用borer新建一个1像素的横线
+### 不使用borer新建一个1像素的横线
 
-
-<div style="height: 1px;background:red;overflow:hidden;"></div
-### 7.两个盒子用一个css属性实现让一个盒子在左边一个盒子在右边并且在一行
+```  
+<div style="height: 1px;background:red;overflow:hidden;"></div>
+```  
+### 两个盒子用一个css属性实现让一个盒子在左边一个盒子在右边并且在一行
 
 
 ```
     <div style="width: 100px;height: 100px;background:red;float: right;"></div>
     <div style="width: 100px;height: 100px;background:blue;"></div>
-```   
-### 8.css垂直和水平居中方法
+```  
+### css垂直和水平居中方法
 
 使用position定位：好处不用管盒子大小，就是不固定宽高
 
@@ -193,7 +194,7 @@ font-size:0;
 
 
 .over-flow{ overflow:auto; zoom:1;  }//zoom:1;是在处理兼容性问题
-### 9.介绍一下css盒模型
+### 介绍一下css盒模型
 
 分为两种：ie盒模型和w3c盒模型
 
@@ -201,7 +202,7 @@ font-size:0;
 
 区别：IE的content部分把 border 和 padding计算了进去;
 
-### 1### 0.position有几个值
+### position有几个值
 
 absolute 生成绝对定位的元素，相对于值不为 static的第一个父元素进行定位。
 
@@ -213,7 +214,7 @@ static 默认值，没有定位
 
 inherit 从父元素继承position属性
 
-### 11.css创建三角形
+###  css创建三角形
 
 ```
 {
@@ -224,32 +225,32 @@ inherit 从父元素继承position属性
   border-color: transparent transparent red transparent;
 }
 ```
-### 12.为什么要初始化css样式
+###  为什么要初始化css样式
 
 因为浏览器的兼容问题，不同浏览器对有些标签的默认值是不同的，如果没对CSS初始化往往会出现浏览器之间的页面显示差异
 
 最简单的初始化方法： * {padding: 0; margin: 0;} （强烈不建议）
 
-### 13.css新增伪类元素
+###  css新增伪类元素
 
 :nth-child :after :befor :checked :disable
 
-### 14.css新特性
+###  css新特性
 
 transform ：translate scale skew rotate； transtion ；animation ；shadow ；border-radius
 
 ## javascript
-### 15.js基本类型
+###  js基本类型
 
 js有五种基本类型：boolean string number null undefined 一种特殊类型：object
 
 新增了Symbol(创建后独一无二且不可变的数据类型 )
 
-### 16.js基本规范
+###  js基本规范
 
 不在同一行声明多个变量 不用全局函数 switch必须有default
 
-### 17.定义函数
+###  定义函数
 
 函数声明 function name（）{}
 
@@ -257,11 +258,11 @@ js有五种基本类型：boolean string number null undefined 一种特殊类�
 
 new实例化（不常用）
 
-### 18.原型链
+###  原型链
 
 简单来说就是每个对象对会在内部初始化一个属性 prototype 如果这个对象不存在这个属性 会在prototype上找 这个prototype又会自己往上找 prototype
 
-### 19.js继承
+###  js继承
 
 构造函数 
 
@@ -299,7 +300,7 @@ new实例化（不常用）
 
 缺点：实现复杂
 
-### 20.js作用域链
+###  js作用域链
 
 作用域链的作用是保证执行环境里有权访问的变量和函数是有序的，作用域链的变量只能向上访问，变量访问到window对象即被终止，作用域链向下访问变量是不被允许的。
 
@@ -313,7 +314,7 @@ this指向new出来的对象
 
 thi指的当前对象
 
-### 22.null与undefined
+###  null与undefined
 
 null 表示一个对象被定义了，值为“空值”； 
 
@@ -321,17 +322,17 @@ undefined 表示不存在这个值。
 
 null==undefined true
 
-### 23.eval
+### eval
 
 解析字符串，应该避免使用eval，不安全，非常耗性能（2次，一次解析成js语句，一次执行），也可以把JSON字符串转换为JSON对象
 
-### 24.window对象和document对象
+### window对象和document对象
 
 window对象是指浏览器打开的窗口。
 
 document对象是Documentd对象（HTML 文档对象）的一个只读引用，window对象的一个属性
 
-### 25.什么是闭包？闭包特性
+### 什么是闭包？闭包特性
 
 闭包是指有权访问另一个函数作用域中变量的函数，创建闭包的最常见的方式就是在一个函数内创建另一个函数，通过另一个函数访问这个函数的局部变量,利用闭包可以突破作用链域，将函数内部的变量和方法传递到外部。 
 
@@ -343,11 +344,11 @@ document对象是Documentd对象（HTML 文档对象）的一个只读引用，w
 
 参数和变量不会被垃圾回收机制回收
 
-### 26.什么是js严格模式
+### 什么是js严格模式
 
 严格模式就是在js代码前加 use strict 让 Javascript 在更严格的条件下运行,使JS编码更加规范化的模式,消除Javascript语法的一些不合理、不严谨之处，减少一些怪异行为。
 
-### 27.如何创建ajax
+### 如何创建ajax
 
 
 ```
@@ -392,13 +393,13 @@ document对象是Documentd对象（HTML 文档对象）的一个只读引用，w
         };
     }
 ```   
-### 28.同步和异步区别
+### 同步和异步区别
 
 同步：浏览器访问服务器请求，用户看得到页面刷新，重新发请求,等请求完，页面刷新，新内容出现，用户看到新内容,进行下一步操作
 
 异步：浏览器访问服务器请求，用户正常操作，浏览器后端进行请求。等请求完，页面不刷新，新内容也会出现，用户看到新内容
 
-### 29.操作dom节点
+### 操作dom节点
 
 creatElement（）具体元素 
 
@@ -412,15 +413,15 @@ replaceChild（）替换
 
 insertChild（）插入
 
-### 30.数组的方法
+### 数组的方法
 
 push（）pop（）unshift（）shift（）splice（）indexOf（）sort（）concat（）jion（）slice（）reverse（） includes（）
 
-### 31.更改this指向
+### 更改this指向
 
 .call() .apply() .bind()
 
-### 32.jquery.extend 与 jquery.fn.extend的区别？
+### jquery.extend 与 jquery.fn.extend的区别？
 
 jquery.extend 为jquery类添加类方法，可以理解为添加静态方法
 
@@ -428,7 +429,7 @@ jquery.fn.extend:源码中jquery.fn = jquery.prototype，所以对jquery.fn的�
 
 jquery.extend扩展，需要通过jquery类来调用，而jquery.fn.extend扩展，所有jquery实例都可以直接调用
 
-### 33.作用域
+### 作用域
 
 作用域 每个方法都是作用域最大的是window 
 
@@ -436,11 +437,11 @@ jquery.extend扩展，需要通过jquery类来调用，而jquery.fn.extend扩展
 
 查找作用域 是从当前查找 再去上一级查找
 
-### 34.同源策略
+### 同源策略
 
 同域名 同端口 同协议
 
-35.http状态码有那些？分别代表是什么意思？
+### http状态码有那些？分别代表是什么意思？
 
 100 Continue	继续，一般在发送post请求时，已发送了http header之后服务端将返回此信息，表示确认，之后发送具体参数信息
 
@@ -470,7 +471,7 @@ jquery.extend扩展，需要通过jquery类来调用，而jquery.fn.extend扩展
 
 503 Service Unavailable 服务器端暂时无法处理请求（可能是过载或维护）
 
-### 36.一个页面从输入 URL 到页面加载显示完成，这个过程中都发生了什么？（流程说的越详细越好）
+### 一个页面从输入 URL 到页面加载显示完成，这个过程中都发生了什么？（流程说的越详细越好）
 
 1、浏览器会开启一个线程来处理这个请求，对 URL 分析判断如果是 http 协议就按照 Web 方式来处理;
 
@@ -493,7 +494,7 @@ jquery.extend扩展，需要通过jquery类来调用，而jquery.fn.extend扩展
 10、页面开始渲染DOM，JS根据DOM API操作DOM,执行事件绑定等，页面显示完成。
 
 ## vue
-### 37.对于mvvm的理解
+### 对于mvvm的理解
 
 MVVM 是 Model-View-ViewModel 的缩写。
 Model代表数据模型，也可以在Model中定义数据修改和操作的业务逻辑。
@@ -502,7 +503,7 @@ ViewModel 监听模型数据的改变和控制视图行为、处理用户交互�
 在MVVM架构下，View 和 Model 之间并没有直接的联系，而是通过ViewModel进行交互，Model 和 ViewModel 之间的交互是双向的， 因此View 数据的变化会同步到Model中，而Model 数据的变化也会立即反应到View 上。
 ViewModel 通过双向数据绑定把 View 层和 Model 层连接了起来，而View 和 Model 之间的同步工作完全是自动的，无需人为干涉，因此开发者只需关注业务逻辑，不需要手动操作DOM, 不需要关注数据状态的同步问题，复杂的数据状态维护完全由 MVVM 来统一管理。
 
-### 38.vue生命周期
+### vue生命周期
 
 beforeCreate（创建前） 在数据观测和初始化事件还未开始
 created（创建后） 完成数据观测，属性和方法的运算，初始化事件，$el属性还没有显示出来
@@ -513,13 +514,13 @@ updated（更新后） 在由于数据更改导致的虚拟DOM重新渲染和打
 beforeDestroy（销毁前） 在实例销毁之前调用。实例仍然完全可用。
 destroyed（销毁后） 在实例销毁之后调用。调用后，所有的事件监听器会被移除，所有的子实例也会被销毁。该钩子在服务器端渲染期间不被调用。
 
-### 39.Vue实现数据双向绑定的原理：Object.defineProperty（）
+### Vue实现数据双向绑定的原理：Object.defineProperty（）
 
 vue实现数据双向绑定主要是：采用数据劫持结合发布者-订阅者模式的方式，通过Object.defineProperty（）来劫持各个属性的setter，getter，在数据变动时发布消息给订阅者，触发相应监听回调。当把一个普通 Javascript 对象传给 Vue 实例来作为它的 data 选项时，Vue 将遍历它的属性，用 Object.defineProperty 将它们转为 getter/setter。用户看不到 getter/setter，但是在内部它们让 Vue 追踪依赖，在属性被访问和修改时通知变化。
 
 vue的数据双向绑定 将MVVM作为数据绑定的入口，整合Observer，Compile和Watcher三者，通过Observer来监听自己的model的数据变化，通过Compile来解析编译模板指令（vue中是用来解析 {{}}），最终利用watcher搭起observer和Compile之间的通信桥梁，达到数据变化 —>视图更新；视图交互变化（input）—>数据model变更双向绑定效果。
 
-### 39.Vue组件间的参数传递
+### Vue组件间的参数传递
 
 1.父组件与子组件传值
 父组件传给子组件：子组件通过props方法接受数据;
@@ -529,21 +530,21 @@ eventBus，就是创建一个事件中心，相当于中转站，可以用它来
 
 使用vuex也可以
 
-### 40.Vue的路由实现：hash模式 和 history模式
+### Vue的路由实现：hash模式 和 history模式
 
 hash模式：在浏览器中符号“#”，#以及#后面的字符称之为hash，用window.location.hash读取；
 特点：hash虽然在URL中，但不被包括在HTTP请求中；用来指导浏览器动作，对服务端安全无用，hash不会重加载页面。
 
 history模式：history采用HTML5的新特性；且提供了两个新方法：pushState（），replaceState（）可以对浏览器历史记录栈进行修改，以及popState事件的监听到状态变更。
 
-### 41.Vue与React的区别？
+### Vue与React的区别？
 
 相同点：
 React采用特殊的JSX语法，Vue.js在组件开发中也推崇编写.vue特殊文件格式，对文件内容都有一些约定，两者都需要编译后使用；中心思想相同：一切都是组件，组件实例之间可以嵌套；都提供合理的钩子函数，可以让开发者定制化地去处理需求；都不内置列数AJAX，Route等功能到核心包，而是以插件的方式加载；在组件开发中都支持mixins的特性。
 不同点：
 React采用的Virtual DOM会对渲染出来的结果做脏检查；Vue.js在模板中提供了指令，过滤器等，可以非常方便，快捷地操作Virtual DOM。
 
-### 42.vue路由的钩子函数
+### vue路由的钩子函数
 
 首页可以控制导航跳转，beforeEach，afterEach等，一般用于页面title的修改。一些需要登录才能调整页面的重定向功能。
 
@@ -555,12 +556,12 @@ from：route当前导航正要离开的路由
 
 next：function一定要调用该方法resolve这个钩子。执行效果依赖next方法的调用参数。可以控制网页的跳转。
 
-### 43.vuex是什么？怎么使用？哪种功能场景使用它？
+### vuex是什么？怎么使用？哪种功能场景使用它？
 
 只用来读取的状态集中放在store中； 改变状态的方式是提交mutations，这是个同步的事物； 异步逻辑应该封装在action中。
 在main.js引入store，注入。新建了一个目录store，….. export 。
 场景有：单页应用中，组件之间的状态、音乐播放、登录状态、加入购物车
-![vuex](img/vue.png)
+![vuex](img/vue.jpg)
 
 state
 Vuex 使用单一状态树,即每个应用将仅仅包含一个store 实例，但单一状态树和模块化并不冲突。存放的数据状态，不可以直接修改里面的数据。
@@ -572,7 +573,7 @@ action
 actions可以理解为通过将mutations里面处里数据的方法变成可异步的处理数据的方法，简单的说就是异步操作数据。view 层通过 store.dispath 来分发 action。
 
 ## 微信小程序
-### 44.微信小程序有几个文件
+### 微信小程序有几个文件
 
 WXML （WeiXin Markup Language）是框架设计的一套标签语言，结合基础组件、事件系统，可以构建出页面的结构。内部主要是微信自己定义的一套组件。
 WXSS (WeiXin Style Sheets)是一套样式语言，用于描述 WXML 的组件样式，
@@ -582,29 +583,29 @@ app.json必须要有这个文件，如果没有这个文件，项目无法运行
 app.js必须要有这个文件，没有也是会报错！但是这个文件创建一下就行 什么都不需要写以后我们可以在这个文件中监听并处理小程序的生命周期函数、声明全局变量。
 app.wxss配置全局css
 
-### 45.微信小程序组件封装
+### 微信小程序组件封装
 
 可以看我上篇文章微信小程序组件的封装：https://juejin.im/post/5afcee09518825670961
 
-### 46.微信小程序怎样跟事件传值
+### 微信小程序怎样跟事件传值
 
 给HTML元素添加data-*属性来传递我们需要的值，然后通过e.currentTarget.dataset或onload的param参数获取。但data-名称不能有大写字母和不可以存放对象
 
-### 47.小程序的wxss和css有哪些不一样的地方？
+### 小程序的wxss和css有哪些不一样的地方？
 
 wxss的图片引入需使用外链地址；
 
 没有Body；样式可直接使用import导入
 
-### 48.小程序关联微信公众号如何确定用户的唯一性？
+### 小程序关联微信公众号如何确定用户的唯一性？
 
 使用wx.getUserInfo方法withCredentials为 true 时 可获取encryptedData，里面有 union_id。后端需要进行对称解密
 
-### 49.微信小程序怎样获取用户信息
+### 微信小程序怎样获取用户信息
 
 微信小程序获取用户信息需要用户授权，首先用户登陆微信小程序使用wx.login这个API，然后通过wx.getUserInfo这个API在拿到用户信息
 
-### 50.微信小程序与vue区别
+### 微信小程序与vue区别
 
 生命周期不一样，微信小程序生命周期比较简单
 
